@@ -20,6 +20,8 @@ public class CoinMarketCap {
 				//int rows= d.findElements(By.xpath("//*[@id=\"__next\"]/div/div[1]/div[2]/div/div/div[5]/table/tbody/tr")).size();
 				int rows= d.findElements(By.xpath("//div[@class='grid']//table/tbody/tr")).size();
                 System.out.println(rows);
+                
+                d.close();
 
 	}
 

@@ -18,7 +18,7 @@ public class Crypto {
 		d.manage().window().maximize();
 		
 		//Login
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		d.findElement(By.id("logEmailInput")).sendKeys("john.lingam1997@gmail.com");
 		d.findElement(By.id("password")).sendKeys("Love4all");
 		d.findElement(By.id("AvasWidgetLoginSubmit")).click();
@@ -88,6 +88,8 @@ public class Crypto {
         for(String ary: str_Array2){
         System.out.print(ary + " ");
         }
+        
+        d.close();
 		
 	}
 }
