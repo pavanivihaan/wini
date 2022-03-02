@@ -4,13 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class CoinMarketCap {
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
-		//Launch Web Page
-				System.setProperty("webdriver.chrome.driver", "C:\\Auto\\Driver\\chromedriver.exe");
+	public static void main(String[] args) throws InterruptedException {		
+				
+				//WebDriverManager.chromedriver().browserVersion("98.0.4758.102").setup();
+				WebDriverManager.chromedriver().setup();
+				
+				//Launch Web Page
+				//System.setProperty("webdriver.chrome.driver", "C:\\Auto\\Driver\\chromedriver.exe");
 				WebDriver d = new ChromeDriver();
 				d.get("https://coinmarketcap.com");
 				d.manage().window().maximize();
